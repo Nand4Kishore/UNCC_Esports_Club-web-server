@@ -1,0 +1,31 @@
+<%- include('../partials/header.ejs')%>
+	<main>
+	  <article class = "connart1">
+		<h2 ><%= event.Title%></h2>
+		<p>&nbsp;<p>
+			
+		<div><form action="/connections/<%= event.id%>/update" ><input type="submit" value="Update" id = "maybe"/></form>
+		<form action= "/connections/<%= event.id%>?_method=DELETE" ><input type="submit" value="Delete" id = "No" formmethod="POST" ></form></div>
+
+		<img src="/images/<%= event.image%>" width="130" id="normniner"  alt="normninerpic"><br><p>&nbsp;</p>	
+		<div>
+			
+			Hosted by <%= event.createdBy%><br><p>&nbsp;</p>
+
+			Where <%= event.Location%> <br> <p>&nbsp;</p>
+
+			Starts at <%= event.starttime%> <br> <p>&nbsp;</p>
+
+			Ends at <%= event.endtime%> <br> <p>&nbsp;</p>
+		<p>&nbsp;</p>
+		</div>	
+
+            <h2 >Details</h2><p>&nbsp;</p>
+          <!-- <p>Looking for 3 players. Anyone who is interested to play multiplayer can join me. <br> If we have 8 people we can create our own room/Arena</p> -->
+			<p><%= event.details%> </p> <p>&nbsp;</p>
+
+			This game venue was created at <%= event.createdAt%> <br> <p>&nbsp;</p>
+				  </article>
+
+	</main>
+	<%- include('../partials/footer.ejs')%>

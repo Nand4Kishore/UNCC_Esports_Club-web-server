@@ -1,0 +1,22 @@
+<%- include('../partials/header.ejs')%>
+    <main>
+        
+        <article class = "connart">
+
+
+            <%if(events){%>
+                   <% Object.keys(events).forEach(ele=>{%>
+                    <p>&nbsp;</p>
+                    <h1><%=ele%></h1><p>&nbsp;</p>
+                    <%      events[ele].forEach(su=>{%>
+                        <a href="/connections/<%=su.id%>"><p><%=su.Title%></p></a><p>&nbsp;</p>
+                        <%        })  %>
+                        <% })  %>
+                        <% }else{%>
+                <p> There are no events to display.</p>
+            <%}%>
+
+
+		  </article>
+	</main>
+    <%- include('../partials/footer.ejs')%>

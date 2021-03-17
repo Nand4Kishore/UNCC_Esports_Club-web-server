@@ -1,0 +1,27 @@
+<%- include('../partials/header.ejs')%>
+    <div class="connart"> 
+        <form action="/connections/<%=event.id%>?_method=PUT" method="POST">
+            <P>
+                <LABEL for="EventCategory">Event Category:</LABEL>
+                    <INPUT type="text" name="Type" id="EventCategory" value="<%= event.Type%>"><BR><BR>
+                <LABEL for="name">Topic Name:</LABEL>
+                    <INPUT type="text" name="Title" id="name" value="<%= event.Title%>"><BR><BR>
+                <LABEL for="Host">Host:</LABEL>
+                          <INPUT type="text" name="createdBy" id="HostedBy" value="<%= event.createdBy%>"><BR><BR>
+                <LABEL for="Details">Details:</LABEL>
+                          <INPUT type="text" name="details" id="Details" value="<%= event.details%>"><BR><BR>
+                <LABEL for="Where">Where:</LABEL>
+                          <INPUT type="text" name= "Location" id="Location" value="<%= event.Location%>"><BR><BR>
+                <LABEL for="When">When:</LABEL>
+                          <INPUT type="text" name="date" id="date" value="<%= event.date%>"><BR><BR>
+                <LABEL for="Start&emspTime">Start Time:</LABEL>
+                          <INPUT type="time" name="starttime"id="Time" value="<%= event.starttime%>"><BR><BR>
+                <LABEL for="End&emspTime">End Time:</LABEL>
+                            <INPUT type="time" name="endtime" id="End&emspTime" value="<%= event.endtime%>"><BR><BR>
+                <label for="img">Select image:</label>
+                           <input type="file" id="img" name="image" accept="image/*" value="<%= event.image%>">><br><br>
+                <button type="submit">Submit</button>
+                </P>
+        </form>
+    </div>       
+<%- include('../partials/footer.ejs')%>
